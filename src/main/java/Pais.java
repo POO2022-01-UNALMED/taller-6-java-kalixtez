@@ -18,7 +18,7 @@ public class Pais {
 		}	
 	}
 	
-	public String getNombre()
+	String getNombre()
 	{
 		return this.nombre;
 	}
