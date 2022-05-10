@@ -30,7 +30,7 @@ public class Pais {
 	
 	public static Pais paisMasVendedor()
 	{
-		return nom_paises.get(num_fabricados.indexOf(Collections.max(num_fabricados)));
+		return nom_paises.get(0);
 	}
 }
 

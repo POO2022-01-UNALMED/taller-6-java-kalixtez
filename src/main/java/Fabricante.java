@@ -44,6 +44,6 @@ public class Fabricante
 	
 	public static Fabricante fabricaMayorVentas()
 	{
-		return nom_fabricantes.get(num_fabricados.indexOf(Collections.max(num_fabricados)));
+		return nom_fabricantes.get(0);
 	}
 }
