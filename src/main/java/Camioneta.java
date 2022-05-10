@@ -7,7 +7,7 @@ public class Camioneta extends Vehiculo
 	
 	public Camioneta(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante, boolean volco)
 	{
-		super(fabricante);
+		//super(fabricante);
 		this.velocidadMaxima = 90;
 		this.traccion = "4X4";
 		

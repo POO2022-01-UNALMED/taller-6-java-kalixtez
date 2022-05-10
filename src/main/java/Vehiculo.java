@@ -15,6 +15,11 @@ public class Vehiculo
 	Fabricante fabricante;
 	
 	static int CantidadVehiculos;
+
+	public Vehiculo()
+	{
+		
+	}
 	
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String taccion, Fabricante f)
 	{
