@@ -23,8 +23,8 @@ public class Vehiculo
 	
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String taccion, Fabricante f)
 	{
-		this.puertas = 4;
-		this.velocidadMaxima = 100;
+		this.puertas = puertas;
+		this.velocidadMaxima = velocidadMaxima;
 		this.traccion = taccion;
 		
 		this.placa = placa;
