@@ -1,20 +1,16 @@
 package vehiculos;
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class Pais {
 	String nombre;
-	
-	static ArrayList<Pais> nom_paises;
-	static ArrayList<Integer> num_fabricados;
-	
+		
 	public Pais(String nombre)
 	{
 		this.nombre = nombre;
-		if(!nom_paises.contains(this))
+		if(!Vehiculo.nom_paises.contains(this))
 		{
-			nom_paises.add(this);
-			num_fabricados.add(0);
+			Vehiculo.nom_paises.add(this);
+			Vehiculo.num_fabricados.add(0);
 		}	
 	}
 	
@@ -30,7 +26,7 @@ public class Pais {
 	
 	public static Pais paisMasVendedor()
 	{
-		return new Pais("C");
+		return Vehiculo.nom_paises.get(Vehiculo.num_fabricados.indexOf(Collections.max(Vehiculo.num_fabricados)));
 	}
 }
 

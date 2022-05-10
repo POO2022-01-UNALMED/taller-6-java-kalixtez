@@ -1,24 +1,20 @@
 package vehiculos;
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class Fabricante 
 {
 	String nombre;
 	Pais pais;
-	
-	static ArrayList<Fabricante> nom_fabricantes;
-	static ArrayList<Integer> num_fabricados;
-	
+		
 	public Fabricante(String nombre, Pais pais)
 	{
 		this.nombre = nombre;
 		this.pais = pais;
 		
-		if(!nom_fabricantes.contains(this))
+		if(!Vehiculo.nom_fabricantes.contains(this))
 		{
-			nom_fabricantes.add(this);
-			num_fabricados.add(0);
+			Vehiculo.nom_fabricantes.add(this);
+			Vehiculo.num_fabricados_f.add(0);
 		}
 	}
 	
@@ -44,6 +40,6 @@ public class Fabricante
 	
 	public static Fabricante fabricaMayorVentas()
 	{
-		return new Fabricante("a", new Pais("k"));
+		return Vehiculo.nom_fabricantes.get(Vehiculo.num_fabricados_f.indexOf(Collections.max(Vehiculo.num_fabricados_f)));
 	}
 }
