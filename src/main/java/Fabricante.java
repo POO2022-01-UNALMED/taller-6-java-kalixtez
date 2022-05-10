@@ -44,6 +44,6 @@ public class Fabricante
 	
 	public static Fabricante fabricaMayorVentas()
 	{
-		return new Fabricante("a", new Pais("k");
+		return new Fabricante("a", new Pais("k"));
 	}
 }
