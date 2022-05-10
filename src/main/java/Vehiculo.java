@@ -102,6 +102,16 @@ public class Vehiculo
 	{
 		this.peso = p;
 	}
+
+	String getTraccion()
+	{
+		return this.traccion;
+	}
+	
+	void setTraccion(String t)
+	{
+		this.traccion = t;
+	}
 	
 	Fabricante getFabricante()
 	{
