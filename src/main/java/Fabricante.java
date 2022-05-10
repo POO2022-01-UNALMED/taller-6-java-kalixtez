@@ -1,18 +1,21 @@
 package vehiculos;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Fabricante 
 {
 	String nombre;
 	Pais pais;
+	
+	static Map<Fabricante, Integer> map = new HashMap<>();
 		
 	public Fabricante(String nombre, Pais pais)
 	{
 		this.nombre = nombre;
 		this.pais = pais;
-		
-		//Vehiculo.nom_fabricantes.add(this);
-		//Vehiculo.num_fabricados_f.add(0);
+		this.map.put(this, 0);
 	}
 	
 	public String getNombre()
@@ -37,7 +40,14 @@ public class Fabricante
 	
 	public static Fabricante fabricaMayorVentas()
 	{
-		//return Vehiculo.nom_fabricantes.get(Vehiculo.num_fabricados_f.indexOf(Collections.max(Vehiculo.num_fabricados_f)));
-		return new Fabricante("Ca", new Pais("bllbb"));
+		int maxValueInMap=(Collections.max(map.values()));  
+        for (Entry<Fabricante, Integer> entry : map.entrySet()) {  
+            if (entry.getValue()==maxValueInMap) 
+            {
+                return entry.getKey();            
+            }
+        }
+        
+        return null;
 	}
 }

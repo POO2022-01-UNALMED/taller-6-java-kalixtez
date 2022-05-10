@@ -1,7 +1,5 @@
 package vehiculos;
 
-import java.util.ArrayList;
-
 public class Vehiculo 
 {
 	
@@ -17,12 +15,6 @@ public class Vehiculo
 	Fabricante fabricante;
 	
 	static int CantidadVehiculos;
-	
-	static ArrayList<Pais> nom_paises;
-	static ArrayList<Integer> num_fabricados;
-	
-	static ArrayList<Fabricante> nom_fabricantes;
-	static ArrayList<Integer> num_fabricados_f;
 	
 	public Vehiculo()
 	{
@@ -41,17 +33,8 @@ public class Vehiculo
 		this.peso = peso;
 		this.fabricante = f;
 		
-		if(nom_fabricantes.contains(f))
-		{
-			int ind = nom_fabricantes.indexOf(f);
-			num_fabricados_f.set(ind, num_fabricados_f.get(ind) + 1);
-		}
-		
-		if(nom_paises.contains(f.getPais()))
-		{
-			int ind = nom_paises.indexOf(f.getPais());
-			num_fabricados.set(ind, num_fabricados.get(ind) + 1);
-		}
+		Pais.map.replace(f.getPais(), Pais.map.get(f.getPais()) + 1);
+		Fabricante.map.replace(f, Fabricante.map.get(f) + 1);
 		
 		CantidadVehiculos++;
 		
@@ -59,15 +42,8 @@ public class Vehiculo
 	
 	public Vehiculo(Fabricante f)
 	{
-		/*
-		 * if(nom_fabricantes.contains(f)) { int ind = nom_fabricantes.indexOf(f);
-		 * num_fabricados_f.set(ind, num_fabricados_f.get(ind) + 1); }
-		 * 
-		 * if(nom_paises.contains(f.getPais())) { int ind =
-		 * nom_paises.indexOf(f.getPais()); num_fabricados.set(ind,
-		 * num_fabricados.get(ind) + 1); }
-		 */
-		
+		Pais.map.replace(f.getPais(), Pais.map.get(f.getPais()) + 1);
+		Fabricante.map.replace(f, Fabricante.map.get(f) + 1);
 		CantidadVehiculos++;
 	}
 	

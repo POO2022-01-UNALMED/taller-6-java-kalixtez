@@ -1,14 +1,17 @@
 package vehiculos;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Collections;
 
 public class Pais {
 	String nombre;
+	static Map<Pais, Integer> map = new HashMap<>();
 		
 	public Pais(String nombre)
 	{
 		this.nombre = nombre;
-		//Vehiculo.nom_paises.add(this);
-		//Vehiculo.num_fabricados.add(0);
+		this.map.put(this, 0);
 	}
 	
 	public String getNombre()
@@ -23,8 +26,15 @@ public class Pais {
 	
 	public static Pais paisMasVendedor()
 	{
-		//return Vehiculo.nom_paises.get(Vehiculo.num_fabricados.indexOf(Collections.max(Vehiculo.num_fabricados)));
-		return new Pais("Co");
+		int maxValueInMap=(Collections.max(map.values()));  
+        for (Entry<Pais, Integer> entry : map.entrySet()) {  
+            if (entry.getValue()==maxValueInMap) 
+            {
+                return entry.getKey();            
+            }
+        }
+        
+        return null;
 	}
 }
 
