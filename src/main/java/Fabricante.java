@@ -11,8 +11,8 @@ public class Fabricante
 		this.nombre = nombre;
 		this.pais = pais;
 		
-		Vehiculo.nom_fabricantes.add(this);
-		Vehiculo.num_fabricados_f.add(0);
+		//Vehiculo.nom_fabricantes.add(this);
+		//Vehiculo.num_fabricados_f.add(0);
 	}
 	
 	public String getNombre()
@@ -37,6 +37,7 @@ public class Fabricante
 	
 	public static Fabricante fabricaMayorVentas()
 	{
-		return Vehiculo.nom_fabricantes.get(Vehiculo.num_fabricados_f.indexOf(Collections.max(Vehiculo.num_fabricados_f)));
+		//return Vehiculo.nom_fabricantes.get(Vehiculo.num_fabricados_f.indexOf(Collections.max(Vehiculo.num_fabricados_f)));
+		return new Fabricante("Ca", new Pais("bllbb"));
 	}
 }

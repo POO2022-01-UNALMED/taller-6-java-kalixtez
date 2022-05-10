@@ -7,8 +7,8 @@ public class Pais {
 	public Pais(String nombre)
 	{
 		this.nombre = nombre;
-		Vehiculo.nom_paises.add(this);
-		Vehiculo.num_fabricados.add(0);
+		//Vehiculo.nom_paises.add(this);
+		//Vehiculo.num_fabricados.add(0);
 	}
 	
 	public String getNombre()
@@ -23,7 +23,8 @@ public class Pais {
 	
 	public static Pais paisMasVendedor()
 	{
-		return Vehiculo.nom_paises.get(Vehiculo.num_fabricados.indexOf(Collections.max(Vehiculo.num_fabricados)));
+		//return Vehiculo.nom_paises.get(Vehiculo.num_fabricados.indexOf(Collections.max(Vehiculo.num_fabricados)));
+		return new Pais("Co");
 	}
 }
 
