@@ -33,97 +33,97 @@ public class Vehiculo
 		CantidadVehiculos++;
 	}
 	
-	static void setCantidadVehiculos(int c)
+	public static void setCantidadVehiculos(int c)
 	{
 		Vehiculo.CantidadVehiculos = c;
 	}
 	
-	static int getCantidadVehiculos()
+	public static int getCantidadVehiculos()
 	{
 		return Vehiculo.CantidadVehiculos;
 	}
 	
-	String getPlaca()
+	public String getPlaca()
 	{
 		return this.placa;
 	}
 	
-	void setPlaca(String placa)
+	public void setPlaca(String placa)
 	{
 		this.placa = placa;
 	}
 	
-	int getPuertas()
+	public int getPuertas()
 	{
 		return puertas;
 	}
 	
-	void setPuertas(int puertas)
+	public void setPuertas(int puertas)
 	{
 		this.puertas = puertas;
 	}
 	
-	int getVelocidadMaxima()
+	public int getVelocidadMaxima()
 	{
 		return this.velocidadMaxima;
 	}
 	
-	void setVelocidadMaxima(int vm)
+	public void setVelocidadMaxima(int vm)
 	{
 		this.velocidadMaxima = vm;
 	}
 	
-	String getNombre()
+	public String getNombre()
 	{
 		return this.nombre;
 	}
 	
-	void setNombre(String n)
+	public void setNombre(String n)
 	{
 		this.nombre = n;
 	}
 	
-	int getPrecio()
+	public int getPrecio()
 	{
 		return this.precio;
 	}
 	
-	void setPrecio(int p)
+	public void setPrecio(int p)
 	{
 		this.precio = p;
 	}
 	
-	int getPeso()
+	public int getPeso()
 	{
 		return this.peso;
 	}
 	
-	void setPeso(int p)
+	public void setPeso(int p)
 	{
 		this.peso = p;
 	}
-
-	String getTraccion()
-	{
-		return this.traccion;
-	}
 	
-	void setTraccion(String t)
-	{
-		this.traccion = t;
-	}
-	
-	Fabricante getFabricante()
+	public Fabricante getFabricante()
 	{
 		return this.fabricante;
 	}
 	
-	void setFabricante(Fabricante f)
+	public String getTraccion()
+	{
+		return this.traccion;
+	}
+	
+	public void setTraccion(String t)
+	{
+		this.traccion = t;
+	}
+	
+	public void setFabricante(Fabricante f)
 	{
 		this.fabricante = f;
 	}
 	
-	String vehiculosPorTipo()
+	public String vehiculosPorTipo()
 	{
 		return "Automoviles: " + Automovil.totalAutomoviles + "Camionetas: " + Camioneta.totalCamionetas + "Camiones: " + Camion.totalCamiones;
 	}
