@@ -22,27 +22,27 @@ public class Fabricante
 		}
 	}
 	
-	String getNombre()
+	public String getNombre()
 	{
 		return this.nombre;
 	}
 	
-	void setNombre(String n)
+	public void setNombre(String n)
 	{
 		this.nombre = n;
 	}
 	
-	Pais getPais()
+	public Pais getPais()
 	{
 		return this.pais;
 	}
 	
-	void setPais(Pais p)
+	public void setPais(Pais p)
 	{
 		this.pais = p;
 	}
 	
-	static String fabricaMayorVentas()
+	public static String fabricaMayorVentas()
 	{
 		return nom_fabricantes.get(num_fabricados.indexOf(Collections.max(num_fabricados)));
 	}
