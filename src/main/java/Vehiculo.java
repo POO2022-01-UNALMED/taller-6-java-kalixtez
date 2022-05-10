@@ -59,17 +59,14 @@ public class Vehiculo
 	
 	public Vehiculo(Fabricante f)
 	{
-		if(nom_fabricantes.contains(f))
-		{
-			int ind = nom_fabricantes.indexOf(f);
-			num_fabricados_f.set(ind, num_fabricados_f.get(ind) + 1);
-		}
-		
-		if(nom_paises.contains(f.getPais()))
-		{
-			int ind = nom_paises.indexOf(f.getPais());
-			num_fabricados.set(ind, num_fabricados.get(ind) + 1);
-		}
+		/*
+		 * if(nom_fabricantes.contains(f)) { int ind = nom_fabricantes.indexOf(f);
+		 * num_fabricados_f.set(ind, num_fabricados_f.get(ind) + 1); }
+		 * 
+		 * if(nom_paises.contains(f.getPais())) { int ind =
+		 * nom_paises.indexOf(f.getPais()); num_fabricados.set(ind,
+		 * num_fabricados.get(ind) + 1); }
+		 */
 		
 		CantidadVehiculos++;
 	}
