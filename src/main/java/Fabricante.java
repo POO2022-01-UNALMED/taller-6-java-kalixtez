@@ -11,11 +11,8 @@ public class Fabricante
 		this.nombre = nombre;
 		this.pais = pais;
 		
-		if(!Vehiculo.nom_fabricantes.contains(this))
-		{
-			Vehiculo.nom_fabricantes.add(this);
-			Vehiculo.num_fabricados_f.add(0);
-		}
+		Vehiculo.nom_fabricantes.add(this);
+		Vehiculo.num_fabricados_f.add(0);
 	}
 	
 	public String getNombre()

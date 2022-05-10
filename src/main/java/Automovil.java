@@ -7,7 +7,7 @@ public class Automovil extends Vehiculo
 	
 	public Automovil(String placa, String nombre, int precio, int peso, Fabricante fabricante, int puestos)
 	{
-		//super(fabricante);
+		super(fabricante);
 		this.puertas = 4;
 		this.velocidadMaxima = 100;
 		this.traccion = "FWD";

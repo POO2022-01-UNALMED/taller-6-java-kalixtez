@@ -7,11 +7,8 @@ public class Pais {
 	public Pais(String nombre)
 	{
 		this.nombre = nombre;
-		if(!Vehiculo.nom_paises.contains(new Pais("a")))
-		{
-			Vehiculo.nom_paises.add(new Pais("a"));
-			Vehiculo.num_fabricados.add(0);
-		}	
+		Vehiculo.nom_paises.add(this);
+		Vehiculo.num_fabricados.add(0);
 	}
 	
 	public String getNombre()

@@ -7,7 +7,7 @@ public class Camion extends Vehiculo
 	
 	public Camion(String placa, String nombre, int precio, int peso, Fabricante fabricante, int ejes)
 	{
-		//super(fabricante);
+		super(fabricante);
 		this.puertas = 2;
 		this.velocidadMaxima = 80;
 		this.traccion = "4X2";
