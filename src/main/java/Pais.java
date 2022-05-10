@@ -18,7 +18,7 @@ public class Pais {
 		}	
 	}
 	
-	String getNombre()
+	public String getNombre()
 	{
 		return this.nombre;
 	}
@@ -30,7 +30,7 @@ public class Pais {
 	
 	public static Pais paisMasVendedor()
 	{
-		return nom_paises.get(0);
+		return new Pais("C");
 	}
 }
 
