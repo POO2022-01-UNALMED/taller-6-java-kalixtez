@@ -25,7 +25,7 @@ public class Vehiculo
 	{
 		this.puertas = 4;
 		this.velocidadMaxima = 100;
-		this.traccion = "FWD";
+		this.traccion = taccion;
 		
 		this.placa = placa;
 		this.nombre = nombre;
