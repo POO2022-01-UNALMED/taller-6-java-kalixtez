@@ -16,17 +16,45 @@ public class Vehiculo
 	
 	static int CantidadVehiculos;
 	
-	public Vehiculo(Fabricante f)
+	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String taccion, Fabricante f)
 	{
-		if(Fabricante.nom_fabricantes.contains(f.getNombre()))
+		this.puertas = 4;
+		this.velocidadMaxima = 100;
+		this.traccion = "FWD";
+		
+		this.placa = placa;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.peso = peso;
+		this.fabricante = f;
+		
+		if(Fabricante.nom_fabricantes.contains(f))
 		{
-			int ind = Fabricante.nom_fabricantes.indexOf(f.getNombre());
+			int ind = Fabricante.nom_fabricantes.indexOf(f);
 			Fabricante.num_fabricados.set(ind, Fabricante.num_fabricados.get(ind) + 1);
 		}
 		
-		if(Pais.nom_paises.contains(f.getPais().getNombre()))
+		if(Pais.nom_paises.contains(f.getPais()))
 		{
-			int ind = Pais.nom_paises.indexOf(f.getPais().getNombre());
+			int ind = Pais.nom_paises.indexOf(f.getPais());
+			Pais.num_fabricados.set(ind, Pais.num_fabricados.get(ind) + 1);
+		}
+		
+		CantidadVehiculos++;
+		
+	}
+	
+	public Vehiculo(Fabricante f)
+	{
+		if(Fabricante.nom_fabricantes.contains(f))
+		{
+			int ind = Fabricante.nom_fabricantes.indexOf(f);
+			Fabricante.num_fabricados.set(ind, Fabricante.num_fabricados.get(ind) + 1);
+		}
+		
+		if(Pais.nom_paises.contains(f.getPais()))
+		{
+			int ind = Pais.nom_paises.indexOf(f.getPais());
 			Pais.num_fabricados.set(ind, Pais.num_fabricados.get(ind) + 1);
 		}
 		

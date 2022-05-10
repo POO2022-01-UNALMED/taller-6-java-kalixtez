@@ -5,15 +5,15 @@ import java.util.Collections;
 public class Pais {
 	String nombre;
 	
-	static ArrayList<String> nom_paises;
+	static ArrayList<Pais> nom_paises;
 	static ArrayList<Integer> num_fabricados;
 	
 	public Pais(String nombre)
 	{
 		this.nombre = nombre;
-		if(!nom_paises.contains(nombre))
+		if(!nom_paises.contains(this))
 		{
-			nom_paises.add(nombre);
+			nom_paises.add(this);
 			num_fabricados.add(0);
 		}	
 	}
@@ -28,7 +28,7 @@ public class Pais {
 		this.nombre = n;
 	}
 	
-	public static String paisMasVendedor()
+	public static Pais paisMasVendedor()
 	{
 		return nom_paises.get(num_fabricados.indexOf(Collections.max(num_fabricados)));
 	}

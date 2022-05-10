@@ -7,7 +7,7 @@ public class Fabricante
 	String nombre;
 	Pais pais;
 	
-	static ArrayList<String> nom_fabricantes;
+	static ArrayList<Fabricante> nom_fabricantes;
 	static ArrayList<Integer> num_fabricados;
 	
 	public Fabricante(String nombre, Pais pais)
@@ -15,9 +15,9 @@ public class Fabricante
 		this.nombre = nombre;
 		this.pais = pais;
 		
-		if(!nom_fabricantes.contains(nombre))
+		if(!nom_fabricantes.contains(this))
 		{
-			nom_fabricantes.add(nombre);
+			nom_fabricantes.add(this);
 			num_fabricados.add(0);
 		}
 	}
@@ -42,7 +42,7 @@ public class Fabricante
 		this.pais = p;
 	}
 	
-	public static String fabricaMayorVentas()
+	public static Fabricante fabricaMayorVentas()
 	{
 		return nom_fabricantes.get(num_fabricados.indexOf(Collections.max(num_fabricados)));
 	}
